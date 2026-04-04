@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.local
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+*.log
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
