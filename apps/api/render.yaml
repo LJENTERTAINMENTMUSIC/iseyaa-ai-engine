@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: iseyaa-ai-engine
+    runtime: python
+    plan: free
+    repo: https://github.com/LJENTERTAINMENTMUSIC/iseyaa-ai-engine
+    branch: master
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false

@@ -13,3 +13,9 @@ __pycache__/
 .vscode/
 *.sublime-workspace
 *.sublime-project
+.turbo/
+.next/
+dist/
+build/
+coverage/
+apps/api/.venv/

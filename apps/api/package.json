@@ -1,0 +1,10 @@
+{
+  "name": "iseyaa-ai-engine",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "python run_server.py",
+    "start": "gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app",
+    "lint": "flake8 ."
+  }
+}

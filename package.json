@@ -1,0 +1,19 @@
+{
+  "name": "iseyaa-tiarionx-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:web": "turbo run dev --filter=iseyaa-web-core",
+    "dev:api": "python apps/api/main.py",
+    "dev:dashboard": "turbo run dev --filter=dashboard",
+    "dev:host": "turbo run dev --filter=host",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,json}\""
+  },
+  "devDependencies": {
+    "turbo": "latest",
+    "prettier": "^3.0.0"
+  },
+  "packageManager": "pnpm@8.15.4"
+}
