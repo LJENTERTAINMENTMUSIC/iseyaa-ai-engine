@@ -1,0 +1,26 @@
+{
+  "connections": [
+    {
+      "name": "ISEYAA Supabase (Dev)",
+      "server": "db.your-project-ref.supabase.co",
+      "port": 5432,
+      "username": "postgres",
+      "password": "${SUPABASE_DB_PASSWORD}",
+      "database": "postgres",
+      "driver": "pg",
+      "is_active": false
+    },
+    {
+      "name": "ISEYAA Local (Dev)",
+      "server": "localhost",
+      "port": 5432,
+      "username": "postgres",
+      "password": "postgres",
+      "database": "iseyaa_dev",
+      "driver": "pg",
+      "is_active": false
+    }
+  ],
+  "bookmarks": [],
+  "messages": {}
+}

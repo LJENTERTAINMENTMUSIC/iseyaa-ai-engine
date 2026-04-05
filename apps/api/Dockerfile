@@ -1,16 +1,25 @@
-FROM python:3.12-slim
+# ISEYAA API - FastAPI Dockerfile
+FROM python:3.14-slim AS base
 
 WORKDIR /app
 
-# Install dependencies
-COPY requirements.txt .
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
+COPY apps/api/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
-COPY . .
+COPY apps/api/ ./apps/api/
+COPY packages/ai_agents/ ./packages/ai_agents/
 
-# Expose the port
+# Create non-root user
+RUN useradd --create-home --uid 1000 appuser
+USER appuser
+
 EXPOSE 8000
 
-# Run the server (PORT env var is set by the hosting platform)
-CMD ["python", "main.py"]
+CMD ["uvicorn", "apps.api.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
