@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "buildCommand": "pnpm run build",
+  "buildCommand": "cd apps/web && pnpm run build",
   "installCommand": "pnpm install",
   "devCommand": "pnpm run dev",
   "framework": "nextjs",
   "regions": ["cdg1"],
   "trailingSlash": false,
   "env": {
-    "NEXT_PUBLIC_API_URL": "https://iseyaa-ai-engine.onrender.com"
+    "NEXT_PUBLIC_API_URL": "https://iseyaa-api.onrender.com"
   }
 }
