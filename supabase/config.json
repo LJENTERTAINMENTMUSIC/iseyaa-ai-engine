@@ -1,0 +1,23 @@
+# Supabase configuration
+# Run: supabase init (if not already done)
+# Then: supabase link --project-ref your-project-ref
+
+{
+  "projectRef": "",
+  "branches": "main",
+  "db": {
+    "port": 54322,
+    "schema": "public",
+    "majorVersion": 15
+  },
+  "api": {
+    "port": 54321,
+    "schemas": ["public", "graphql_public"],
+    "extraConfig": {
+      "db-plan": "free"
+    }
+  },
+  "studio": {
+    "port": 54323
+  }
+}

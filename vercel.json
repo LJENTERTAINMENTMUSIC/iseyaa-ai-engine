@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "buildCommand": "npx turbo run build",
-  "installCommand": "npm install",
-  "devCommand": "npx turbo run dev",
+  "buildCommand": "pnpm run build",
+  "installCommand": "pnpm install",
+  "devCommand": "pnpm run dev",
   "framework": "nextjs",
   "regions": ["cdg1"],
-  "trailingSlash": false
+  "trailingSlash": false,
+  "env": {
+    "NEXT_PUBLIC_API_URL": "https://iseyaa-ai-engine.onrender.com"
+  }
 }

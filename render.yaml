@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: iseyaa-ai-engine
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: SUPABASE_JWT_SECRET
+        sync: false
+      - key: NODE_ENV
+        value: "production"
+    healthCheckPath: "/api/system/health"

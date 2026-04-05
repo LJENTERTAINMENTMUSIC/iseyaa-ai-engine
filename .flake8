@@ -1,0 +1,44 @@
+# Flake8 configuration for ISEYAA TiarionX
+# Python linting and style checking
+
+[flake8]
+max-line-length = 100
+max-complexity = 12
+exclude =
+    .git,
+    __pycache__,
+    .venv,
+    venv,
+    node_modules,
+    build,
+    dist,
+    .next,
+    .turbo,
+    *.egg-info,
+    .mypy_cache,
+    .pytest_cache
+
+# Ignore rules that conflict with Black
+extend-ignore =
+    E203,  # whitespace before ':'
+    W503,  # line break before binary operator
+
+# Per-file ignores
+per-file-ignores =
+    __init__.py:F401,F403
+    apps/api/main.py:E402
+    packages/ai_agents/__init__.py:F401
+
+# Error codes to check
+select =
+    E,      # pycodestyle errors
+    W,      # pycodestyle warnings
+    F,      # pyflakes
+    B,      # flake8-bugbear
+    C,      # mccabe complexity
+    I,      # isort
+    N,      # pep8-naming
+    UP,     # pyupgrade
+
+# Docstring checking
+docstring-convention = google
