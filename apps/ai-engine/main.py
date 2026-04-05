@@ -62,8 +62,8 @@ async def concierge(req: AIRequest):
         return {"response": "Creative node active. I can help you mint digital heritage assets."}
     if "legal" in query or "audit" in query:
         return {"response": "Legal node active. Verifying OHA 5% Tourism revenue compliance."}
-    if "book" in query or "stay" in query:
-        return {"response": "Hospitality node active. I can show you hotels and landmarks."}
+    if "book" in query or "stay" in query or "hotel" in query or "resort" in query or "shortlet" in query:
+        return {"response": "Hospitality node active. I can find the best hotels, resorts, and shortlet accommodations for your stay."}
     if "flight" in query or "ticket" in query:
         return {"response": "Mobility Cluster active. I can help you book flights and electric bikes."}
         

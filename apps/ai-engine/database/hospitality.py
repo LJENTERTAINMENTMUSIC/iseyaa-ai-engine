@@ -18,12 +18,15 @@ async def get_destinations(category=None, lga=None):
     finally:
         await conn.close()
 
-async def get_stays(lga=None, price_max=None):
+async def get_stays(category=None, lga=None, price_max=None):
     conn = await get_db_conn()
     try:
-        # Pillar 3: Accommodation & Hospitality
+        # Pillar 3: Accommodation & Hospitality (Focus: Shortlet, Hotel, Resort)
         query = "SELECT * FROM stays WHERE 1=1"
         params = []
+        if category and category != "All":
+            params.append(category)
+            query += f" AND category = ${len(params)}"
         if lga:
             params.append(lga)
             query += f" AND lga_id = ${len(params)}"

@@ -2,8 +2,8 @@ services:
   - type: web
     name: iseyaa-ai-engine
     runtime: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python main.py"
+    buildCommand: "pip install -r apps/ai-engine/requirements.txt"
+    startCommand: "python apps/ai-engine/main.py"
     envVars:
       - key: PORT
         value: 10000

@@ -4,7 +4,7 @@ from typing import List, Optional
 from services.auth import get_current_user
 import db
 
-router = APIRouter(prefix="/api/commerce", tags=["Digital Marketplace"])
+router = APIRouter(prefix="/api/commerce", tags=["Digital Marketplace & Food Vendors"])
 
 class OrderRequest(BaseModel):
     merchant_id: str

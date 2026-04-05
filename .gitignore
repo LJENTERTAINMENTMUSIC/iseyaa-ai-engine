@@ -27,3 +27,4 @@ apps/api/.venv/
 credentials.json
 test_login.py
 CREDENTIALS.md
+.vercel

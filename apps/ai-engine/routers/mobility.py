@@ -7,7 +7,7 @@ import db
 router = APIRouter(prefix="/api/mobility", tags=["Transport & Mobility"])
 
 class BookingRequest(BaseModel):
-    category: str # Flight, EBike, Car, Bus
+    category: str # Flight, EBike, Car, Bus, Train
     pickup: str
     dropoff: str
     fare: float
@@ -33,7 +33,7 @@ async def book_trip(
     req: BookingRequest,
     user: dict = Depends(get_current_user)
 ):
-    # Pillar 2: Transport & Mobility (Full Cluster)
+    # Pillar 2: Transport & Mobility (Full Cluster: Cabs, Bikes, Flights, Buses, Trains)
     user_id = user["id"] if "id" in user else user["user_id"]
     conn = await db.get_db_conn()
     try:

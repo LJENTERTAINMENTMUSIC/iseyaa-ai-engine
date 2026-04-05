@@ -5,7 +5,7 @@ from services.auth import get_current_user
 from services.paystack import PaystackService
 import db
 
-router = APIRouter(prefix="/api/hospitality", tags=["Accommodation & Tourism"])
+router = APIRouter(prefix="/api/hospitality", tags=["Shortlets, Hotels, Resorts & Tourism"])
 
 class BookingRequest(BaseModel):
     item_id: str
@@ -17,11 +17,12 @@ async def get_destinations(
     category: Optional[str] = Query(None),
     lga: Optional[str] = Query(None)
 ):
-    # Pillar 11: Tourism, Culture & Heritage
+    # Pillar 11: Tourism, Culture, Events & Heritage
     return await db.get_destinations(category=category, lga=lga)
 
 @router.get("/stays")
 async def get_stays(
+    category: Optional[str] = Query(None), # shortlet, hotel, resort
     lga: Optional[str] = Query(None),
     price_max: Optional[float] = Query(None)
 ):
