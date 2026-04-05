@@ -1,15 +1,86 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { 
-  Store, Tent, MapPin, MessageSquare, 
-  Settings, User, PlusCircle, CreditCard,
-  ChevronRight, Star, Clock, Package
+  Tent, MessageSquare, 
+  PlusCircle, CreditCard,
+  ChevronRight, Clock, Package,
+  ShieldCheck, Zap, Camera,
+  CheckCircle, Globe
 } from "lucide-react";
 import styles from "./page.module.css";
 
 export default function HostDashboard() {
   const [activeTab, setActiveTab] = useState("listings");
+  const [isVerified] = useState(false);
+  const [onboardingStep, setOnboardingStep] = useState(1);
+  const [loading, setLoading] = useState(false);
+
+  // Mock verification check
+  useEffect(() => {
+    const checkStatus = async () => {
+      // In prod, call /api/user/profile to check kyc_status
+    };
+    checkStatus();
+  }, []);
+
+  const handleStartOnboarding = () => {
+    setOnboardingStep(2);
+  };
+
+  const handleCompleteKYC = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setOnboardingStep(3);
+    }, 1500);
+  };
+
+  if (!isVerified && onboardingStep < 4) {
+    return (
+      <div className={styles.onboardingContainer}>
+        <div className={styles.onboardingCard}>
+          {onboardingStep === 1 && (
+            <div className={styles.onboardingContent}>
+              <div className={styles.onboardingIcon}><ShieldCheck size={48} color="#10b981" /></div>
+              <h2 className={styles.onboardingTitle}>Become a Verified Host</h2>
+              <p className={styles.onboardingSub}>To list your services on ISEYAA, Ogun State Government requires a verified Host profile.</p>
+              <div className={styles.benefits}>
+                <div className={styles.benefit}><Zap size={16} /> <span>Get the &quot;Verified&quot; badge</span></div>
+                <div className={styles.benefit}><Globe size={16} /> <span>Global visibility for your service</span></div>
+                <div className={styles.benefit}><CheckCircle size={16} /> <span>Secure automated payouts</span></div>
+              </div>
+              <button className={styles.primBtn} onClick={handleStartOnboarding}>Start Application <ChevronRight size={18} /></button>
+            </div>
+          )}
+
+          {onboardingStep === 2 && (
+            <div className={styles.onboardingContent}>
+              <h2 className={styles.onboardingTitle}>Identity Verification</h2>
+              <p className={styles.onboardingSub}>Upload your NIN or International Passport for Squad Alpha review.</p>
+              <div className={styles.uploadBox}>
+                <Camera size={32} color="#64748b" />
+                <p>Click to upload document photo</p>
+                <input type="file" className={styles.fileInput} />
+              </div>
+              <button className={styles.primBtn} onClick={handleCompleteKYC} disabled={loading}>
+                {loading ? "Processing..." : "Submit Identity"}
+              </button>
+            </div>
+          )}
+
+          {onboardingStep === 3 && (
+            <div className={styles.onboardingContent}>
+              <div className={styles.onboardingIcon}><Clock size={48} color="#f59e0b" /></div>
+              <h2 className={styles.onboardingTitle}>Pending Review</h2>
+              <p className={styles.onboardingSub}>Your application is being reviewed by the Ogun State Tourism Board. This usually takes 24 hours.</p>
+              <button className={styles.secBtn} onClick={() => setOnboardingStep(4)}>Preview Dashboard (Read Only)</button>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.container}>
@@ -83,7 +154,7 @@ export default function HostDashboard() {
                 <div className={styles.listingImg} style={{ background: "#1e293b" }}>🌿</div>
                 <div className={styles.listingInfo}>
                   <p className={styles.listingName}>Olumo Rock Secret Trail</p>
-                  <p className={styles.listingMeta}>$25.00 · Heritage Guide</p>
+                  <p className={styles.listingMeta}>₦12,500 · Heritage Guide</p>
                 </div>
                 <ChevronRight size={16} color="#475569" />
               </div>
@@ -91,7 +162,7 @@ export default function HostDashboard() {
                 <div className={styles.listingImg} style={{ background: "#064e3b" }}>🏨</div>
                 <div className={styles.listingInfo}>
                   <p className={styles.listingName}>Forest Edge Eco-Lodge</p>
-                  <p className={styles.listingMeta}>$85.00 · Stay</p>
+                  <p className={styles.listingMeta}>₦45,000 · Stay</p>
                 </div>
                 <ChevronRight size={16} color="#475569" />
               </div>
@@ -104,7 +175,7 @@ export default function HostDashboard() {
               <span className={styles.cardBadge}>This Month</span>
             </div>
             <div className={styles.earnings}>
-              <div className={styles.earningsVal}>$1,240.50</div>
+              <div className={styles.earningsVal}>₦240,500</div>
               <p className={styles.earningsSub}>+12% from last month</p>
             </div>
           </div>

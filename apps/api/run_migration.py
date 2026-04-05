@@ -16,14 +16,17 @@ async def run_migration():
         conn = await asyncpg.connect(database_url)
         print("Connected successfully.")
         
-        print("Reading SQL migration file...")
-        with open("../supabase/migrations/001_create_destinations.sql", "r", encoding="utf-8") as f:
-            sql_query = f.read()
-
-        print("Pushing database schema and data...")
-        await conn.execute(sql_query)
-        print("Database successfully seeded!")
+        migration_dir = "../../supabase/migrations"
+        migration_files = sorted([f for f in os.listdir(migration_dir) if f.endswith(".sql")])
         
+        for migration_file in migration_files:
+            print(f"Running migration: {migration_file}...")
+            with open(os.path.join(migration_dir, migration_file), "r", encoding="utf-8") as f:
+                sql_query = f.read()
+            await conn.execute(sql_query)
+            print(f"Migration {migration_file} completed!")
+
+        print("Database successfully seeded and migrated!")
         await conn.close()
     except Exception as e:
         print(f"Migration failed: {e}")

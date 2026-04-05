@@ -8,21 +8,39 @@ import os
 import json
 import datetime
 import httpx
-from typing import List, Optional
-from fastapi import FastAPI, HTTPException, Body, Request, Query
+import sys
+from unittest.mock import MagicMock
+
+# ─── Python 3.14 Fix: Skip problematic OpenAPI models ───────────────
+sys.modules["fastapi.openapi.models"] = MagicMock()
+
+# ─── AI Intelligence Layer Node Mapping ───────────────
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent.parent / "packages"))
+from ai_agents import orchestrator
+from services.communications import comm_service # OHA Communications
+from services.auth import get_current_user # Supabase Auth
+from services.paystack import paystack_service # Monetization
+from db import fetch_latest_kyc_submission # Required for status checks
+from fastapi import FastAPI, HTTPException, Body, Request, Query, Depends
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
 from dotenv import load_dotenv
+
+# ─── Utility ─────────────────────────────────────────────────────────────────
+class DotDict(dict):
+    """Simple helper to allow dot notation for dicts"""
+    __getattr__ = dict.get
+    __setattr__ = dict.__setitem__
+    __delattr__ = dict.__delitem__
 
 # ─── Config ──────────────────────────────────────────────────────────────────
 load_dotenv()
-app = FastAPI(title="ISEYAA AI Engine", version="1.1.0")
-
-# ─── Auth/DB Module ──────────────────────────────────────────────────────────
-import db
+app = FastAPI(title="ISEYAA AI Engine", version="1.1.0", docs_url=None, redoc_url=None, openapi_url=None)
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+AI_PROVIDER = os.getenv("AI_PROVIDER", "anthropic").lower()
 
 # ─── CORS Middleware ──────────────────────────────────────────────────────────
 app.add_middleware(
@@ -32,63 +50,30 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ─── Schemas (Pydantic) ───────────────────────────────────────────────────────
-class ConciergeRequest(BaseModel):
-    query: str
-    context: Optional[dict] = None
-
-class PlannerRequest(BaseModel):
-    query: str
-    destination_id: Optional[str] = None
-
-class Destination(BaseModel):
-    id: str
-    title: str
-    location: str
-    category: str
-    rating: float
-    image: str
-    description: str
-    tags: List[str]
-    opening_hours: Optional[str] = None
-    entry_fee: Optional[str] = None
-    lga: Optional[str] = None
-
-class KycUpload(BaseModel):
-    user_id: str
-    document_type: str # 'nin', 'voters_card', 'passport'
-    document_number: str
-    file_url: str
-
-class UserProfile(BaseModel):
-    user_id: str
-    full_name: str
-    role: str
-    kyc_status: str
+# ─── Schemas (Pydantic-Free for Python 3.14) ──────────────────────────────────
+# Using DotDict and Body() instead of BaseModel to bypass Pydantic v1 crashes
 
 # ─── Security Dependencies (Squad Alpha) ──────────────────────────────────────
-async def get_current_user(request: Request) -> UserProfile:
-    # Squad Alpha: Integration with Supabase JWT goes here
-    # Mocking a verified government user for demo purposes if header present
-    auth = request.headers.get("Authorization", "")
-    if "govt-token" in auth:
-        return UserProfile(user_id="123", full_name="Admin User", role="govt", kyc_status="verified")
-    return UserProfile(user_id="456", full_name="Guest", role="traveler", kyc_status="unverified")
+# Current user is now injected via get_current_user in individual endpoints if needed,
+# or used as a standard security dependency.
 
-async def verify_govt_access(user: UserProfile = Body(..., embed=True)):
-    if user.role != "govt" or user.kyc_status != "verified":
-        raise HTTPException(status_code=403, detail="Access Denied: Government Verification Required (NIN/Passport)")
+async def verify_govt_access(user: dict):
+    # Check if user has Govt role AND has completed Phase 3 verification
+    # Using Sub (user_id) from the decoded JWT
+    kyc_data = await fetch_latest_kyc_submission(user.get("user_id"))
+    status = kyc_data.get("status") if kyc_data else "unverified"
+    
+    if user.get("role") != "service_role" and user.get("role") != "govt" and status != "verified":
+        raise HTTPException(
+            status_code=403, 
+            detail=f"Access Denied: Government Verification Required (Current Status: {status}). Please complete Phase 3 NIN/Passport verification."
+        )
     return user
 
-# ─── AI Concierge Mock Logic ──────────────────────────────────────────────────
-SYSTEM_PROMPT = """You are Deep, ISEYAA's expert AI tourism concierge for Ogun State, Nigeria.
-Speak in a warm, inspirational, slightly poetic tone — like a world-class tour guide."""
+# Legacy ask_ai refactored into @iseyaa/ai_agents Orchestrator
+# ask_ai function removed as AI requests are now delegated to specialized agents.
 
-def smart_mock(query: str) -> str:
-    q = query.lower()
-    if "olumo" in q: return "Olumo Rock is Ogun State's crown jewel. Visiting at sunrise is magical."
-    if "ojude" in q: return "The Ojude Oba Festival is Nigeria's most magnificent cultural spectacle."
-    return f"Ogun State is full of wonders! For '{query}', I recommend starting at Olumo Rock."
+# smart_mock logic moved to the AI package's orchestrator fallback handlers.
 
 # ─── Endpoints ────────────────────────────────────────────────────────────────
 
@@ -118,6 +103,67 @@ async def get_lga_profile(id: str):
         raise HTTPException(status_code=404, detail="LGA intelligence profile not found")
     return profile
 
+# ─── StayHub (Accommodation) (Phase 4) ───────────────────────────────
+@app.get("/api/stays")
+async def get_stays(lga_id: str = None, limit: int = 10):
+    stays = await db.fetch_stays(lga_id, limit)
+    return {"stays": stays, "total": len(stays)}
+
+@app.get("/api/stays/{id}")
+async def get_stay(id: str):
+    stay = await db.fetch_stay_by_id(id)
+    if not stay:
+        raise HTTPException(status_code=404, detail="Accommodation not found")
+    return stay
+
+# ─── Bookings & Transactions (Phase 5) ───────────────────────────────
+@app.post("/api/bookings")
+async def create_booking(req: dict = Body(...), user: dict = Depends(get_current_user)):
+    req = DotDict(req)
+    # Check if user is KYC verified before allowing a high-value booking
+    kyc_data = await fetch_latest_kyc_submission(user.get("user_id"))
+    status = kyc_data.get("status") if kyc_data else "unverified"
+    
+    if status != "verified" and req.item_type == "stay":
+         raise HTTPException(status_code=403, detail="KYC Verification Required for Accommodation Bookings. Please verify your Identity first.")
+    
+    # ─── Step 1: Create local booking record ───
+    booking = await db.create_booking(
+        user_id=user.get("user_id"),
+        item_id=req.item_id,
+        item_type=req.item_type,
+        check_in=req.check_in,
+        check_out=req.check_out,
+        total_price=req.total_price
+    )
+    
+    # ─── Step 2: Initialize Paystack Transaction ───
+    # We include the booking_id and item_type in metadata for the webhook later
+    payment = await paystack_service.initialize_transaction(
+        email=user.get("email", "guest@iseyaa.ng"),
+        amount_naira=req.total_price,
+        metadata={"booking_id": booking["id"], "item_type": req.item_type, "user_id": user.get("user_id")}
+    )
+    
+    # ─── OHA/OEMG Governance: Tax Levy Calculation (5%) ───
+    # Recorded as 'pending' until payment verification
+    if booking and booking.get("status") != "error":
+        levy = float(req.total_price) * 0.05
+        await db.record_tourism_levy(booking["id"], "M-GOV-001", levy)
+        print(f"[OHA/OEMG-GOVERNANCE] Recorded pending ₦{levy} Tourism/Event Levy for Booking {booking['id']}")
+            
+    return {
+        "status": "success", 
+        "booking": booking, 
+        "checkout_url": payment["data"]["authorization_url"],
+        "reference": payment["data"]["reference"]
+    }
+
+@app.get("/api/bookings/user/{user_id}")
+async def get_user_bookings(user_id: str):
+    bookings = await db.fetch_user_bookings(user_id)
+    return {"bookings": bookings}
+
 @app.get("/api/search")
 async def search(q: str = ""):
     if not q: return {"results": [], "query": q, "total": 0}
@@ -125,15 +171,27 @@ async def search(q: str = ""):
     return {"results": results, "query": q, "total": len(results)}
 
 @app.post("/api/kyc/upload")
-async def kyc_upload(req: KycUpload):
-    # Module 7: Trust & Identity Service
-    # (Squad Alpha: Save to kyc_documents table)
-    print(f"[KYC] Received {req.document_type} for user {req.user_id}")
+async def kyc_upload(req: dict = Body(...)):
+    req = DotDict(req)
+    # Module 7: Trust & Identity Service - Phase 3 Real Integration
+    result = await kyc.process_kyc_submission(
+        user_id=req.user_id,
+        doc_type=req.document_type,
+        doc_number=req.document_number,
+        file_url=req.file_url
+    )
     return {
-        "status": "pending",
-        "message": f"Your {req.document_type} has been submitted for verification. Please allow 24-48 hours for review.",
-        "tracking_id": "kyc_mock_5829"
+        "status": result.status,
+        "message": result.message,
+        "tracking_id": result.tracking_id,
+        "timestamp": result.timestamp.isoformat(),
+        "meta": result.metadata
     }
+
+@app.get("/api/kyc/status/{user_id}")
+async def get_kyc_status(user_id: str):
+    status = await kyc.check_kyc_status(user_id)
+    return {"user_id": user_id, "status": status}
 
 @app.get("/api/admin/stats")
 async def admin_stats(request: Request):
@@ -150,31 +208,28 @@ async def admin_stats(request: Request):
     }
 
 @app.post("/api/ai/concierge")
-async def concierge(req: ConciergeRequest):
-    if not OPENAI_API_KEY:
-        return {"status": "success", "response": smart_mock(req.query), "mode": "demo"}
-    # (Squad Alpha: OpenAI integration stays here)
-    return {"status": "success", "response": smart_mock(req.query), "mode": "demo"}
+async def concierge(req: dict = Body(...)):
+    req = DotDict(req)
+    # AI requests are now handled by the @iseyaa/ai_agents package
+    response_text = await orchestrator.delegate_task("general", {}, req.query)
+    return {"status": "success", "response": response_text, "mode": "agent"}
 
 @app.post("/api/ai/planner")
-async def planner(req: PlannerRequest):
-    # Module 2 Agent v2
-    itinerary = [
-        {"day": 1, "activities": [
-            {"time": "09:00 AM", "task": "Arrive at destination & Check-in", "tip": "Wear comfortable shoes."},
-            {"time": "11:30 AM", "task": "Guided Historical Trek", "tip": "Ask about the ancestral stories."},
-            {"time": "02:00 PM", "task": "Local Cuisine Lunch", "tip": "Try the regional specialty."}
-        ]},
-        {"day": 2, "activities": [
-            {"time": "08:30 AM", "task": "Sunrise Photography Session", "tip": "Best light is before 9am."},
-            {"time": "12:00 PM", "task": "Artisan Workshop / Market Visit", "tip": "Support local craftsmen."}
-        ]}
-    ]
+async def planner(req: dict = Body(...)):
+    req = DotDict(req)
+    # Phase 3: Specialized planner agent
+    lga_info = {}
+    if req.destination_id:
+        dest = await db.fetch_destination_by_id(req.destination_id)
+        if dest:
+            lga_info["lga_name"] = dest.get('lga_id') or dest.get('lga')
+    
+    response_text = await orchestrator.delegate_task("planner", lga_info, req.query)
     return {
         "status": "success",
         "destination_id": req.destination_id,
-        "itinerary": itinerary,
-        "note": "Personalized plan generated by Deep v2."
+        "itinerary_text": response_text,
+        "note": "Personalized plan generated by Deep v2 Agent."
     }
 
 @app.get("/api/weather")

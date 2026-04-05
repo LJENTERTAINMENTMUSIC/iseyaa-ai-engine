@@ -134,26 +134,90 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.statGlow {
+  position: absolute;
+  top: -20px; right: -20px;
+  width: 80px; height: 80px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+  filter: blur(20px);
 }
 
 .statIcon { margin-bottom: 16px; }
 .statValue { font-size: 32px; font-weight: 800; margin-bottom: 4px; }
 .statLabel { font-size: 13px; color: #64748b; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
 
-.chartPlaceholder {
-  height: 300px;
+/* KYC Table */
+.kycTable {
   background: #111827;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 120px 140px;
+  padding: 16px 24px;
+  background: rgba(255,255,255,0.02);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 1px;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 120px 140px;
+  padding: 16px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  align-items: center;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.tableRow:hover { background: rgba(255,255,255,0.01); }
+
+.cellStatus {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.pending { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+.verified { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+
+.cellActions {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 12px;
   color: #64748b;
 }
 
-.placeholderBox {
+.actionView {
+  background: rgba(255,255,255,0.05);
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.emptyState {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #64748b;
   gap: 16px;
 }

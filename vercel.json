@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "buildCommand": "npx turbo run build",
+  "installCommand": "npm install",
+  "devCommand": "npx turbo run dev",
+  "framework": "nextjs",
+  "regions": ["cdg1"],
+  "trailingSlash": false
+}

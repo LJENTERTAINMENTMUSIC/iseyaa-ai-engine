@@ -163,3 +163,127 @@
 .earnings { padding: 8px 0; }
 .earningsVal { font-size: 36px; font-weight: 900; color: #7ec850; margin-bottom: 4px; }
 .earningsSub { font-size: 14px; color: #475569; }
+
+/* Onboarding */
+.onboardingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #080f0c;
+  padding: 20px;
+}
+
+.onboardingCard {
+  background: #0f1712;
+  border: 1px solid rgba(126, 200, 80, 0.1);
+  border-radius: 32px;
+  max-width: 440px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  scrollbar-width: none;
+}
+
+.onboardingCard::-webkit-scrollbar { display: none; }
+
+.onboardingContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.onboardingIcon {
+  margin-bottom: 24px;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 20px;
+  border-radius: 24px;
+}
+
+.onboardingTitle {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.onboardingSub {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.benefits {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #94a3b8;
+  background: rgba(255,255,255,0.02);
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.primBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #7ec850;
+  color: #080f0c;
+  border: none;
+  border-radius: 14px;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.primBtn:hover { transform: translateY(-2px); }
+
+.secBtn {
+  width: 100%;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 16px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.uploadBox {
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border: 1px dashed rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.fileInput {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
