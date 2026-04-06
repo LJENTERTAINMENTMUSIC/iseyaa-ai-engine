@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "private": true,
   "scripts": {
-    "dev": "python run_server.py",
-    "start": "gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app"
+    "dev": "cd apps/ai-engine && python run_server.py",
+    "start": "cd apps/ai-engine && gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app"
   }
 }
