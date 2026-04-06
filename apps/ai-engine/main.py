@@ -2,7 +2,15 @@ from fastapi import FastAPI, Depends, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import os
+import logging
 from dotenv import load_dotenv
+
+# Configure Logging for Production
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger("iseyaa-ai-engine")
 
 # ISEYAA "Launch 2.1" Routers (The Full 13 Pillars)
 from routers import (

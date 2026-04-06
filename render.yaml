@@ -17,4 +17,6 @@ services:
         sync: false
       - key: NODE_ENV
         value: "production"
+      - key: START_TIME
+        generateValue: true
     healthCheckPath: "/api/system/health"

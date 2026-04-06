@@ -7,6 +7,6 @@
   "regions": ["cdg1"],
   "trailingSlash": false,
   "env": {
-    "NEXT_PUBLIC_API_URL": "https://iseyaa-api.onrender.com"
+    "NEXT_PUBLIC_API_URL": "https://iseyaa-ai-engine.onrender.com"
   }
 }
