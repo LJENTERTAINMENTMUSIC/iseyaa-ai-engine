@@ -20,8 +20,8 @@ exclude =
 
 # Ignore rules that conflict with Black
 extend-ignore =
-    E203,  # whitespace before ':'
-    W503,  # line break before binary operator
+    E203,
+    W503
 
 # Per-file ignores
 per-file-ignores =
@@ -31,14 +31,14 @@ per-file-ignores =
 
 # Error codes to check
 select =
-    E,      # pycodestyle errors
-    W,      # pycodestyle warnings
-    F,      # pyflakes
-    B,      # flake8-bugbear
-    C,      # mccabe complexity
-    I,      # isort
-    N,      # pep8-naming
-    UP,     # pyupgrade
+    E,
+    W,
+    F,
+    B,
+    C,
+    I,
+    N,
+    UP
 
 # Docstring checking
 docstring-convention = google
