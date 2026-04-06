@@ -1,0 +1,758 @@
+﻿build-and-test	Set up job	´╗┐2026-04-06T06:07:52.4700215Z Current runner version: '2.333.1'
+build-and-test	Set up job	2026-04-06T06:07:52.4725013Z ##[group]Runner Image Provisioner
+build-and-test	Set up job	2026-04-06T06:07:52.4725881Z Hosted Compute Agent
+build-and-test	Set up job	2026-04-06T06:07:52.4726403Z Version: 20260213.493
+build-and-test	Set up job	2026-04-06T06:07:52.4727119Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+build-and-test	Set up job	2026-04-06T06:07:52.4728088Z Build Date: 2026-02-13T00:28:41Z
+build-and-test	Set up job	2026-04-06T06:07:52.4728700Z Worker ID: {1a34b41c-a3da-4015-bafb-44396a6f0319}
+build-and-test	Set up job	2026-04-06T06:07:52.4729455Z Azure Region: westus
+build-and-test	Set up job	2026-04-06T06:07:52.4729962Z ##[endgroup]
+build-and-test	Set up job	2026-04-06T06:07:52.4731359Z ##[group]Operating System
+build-and-test	Set up job	2026-04-06T06:07:52.4732037Z Ubuntu
+build-and-test	Set up job	2026-04-06T06:07:52.4732545Z 24.04.4
+build-and-test	Set up job	2026-04-06T06:07:52.4732973Z LTS
+build-and-test	Set up job	2026-04-06T06:07:52.4733475Z ##[endgroup]
+build-and-test	Set up job	2026-04-06T06:07:52.4733970Z ##[group]Runner Image
+build-and-test	Set up job	2026-04-06T06:07:52.4734478Z Image: ubuntu-24.04
+build-and-test	Set up job	2026-04-06T06:07:52.4735032Z Version: 20260329.72.1
+build-and-test	Set up job	2026-04-06T06:07:52.4736009Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260329.72/images/ubuntu/Ubuntu2404-Readme.md
+build-and-test	Set up job	2026-04-06T06:07:52.4737867Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260329.72
+build-and-test	Set up job	2026-04-06T06:07:52.4738798Z ##[endgroup]
+build-and-test	Set up job	2026-04-06T06:07:52.4739884Z ##[group]GITHUB_TOKEN Permissions
+build-and-test	Set up job	2026-04-06T06:07:52.4741820Z Contents: read
+build-and-test	Set up job	2026-04-06T06:07:52.4742351Z Metadata: read
+build-and-test	Set up job	2026-04-06T06:07:52.4742926Z Packages: read
+build-and-test	Set up job	2026-04-06T06:07:52.4743413Z ##[endgroup]
+build-and-test	Set up job	2026-04-06T06:07:52.4745725Z Secret source: Actions
+build-and-test	Set up job	2026-04-06T06:07:52.4746393Z Prepare workflow directory
+build-and-test	Set up job	2026-04-06T06:07:52.5080921Z Prepare all required actions
+build-and-test	Set up job	2026-04-06T06:07:52.5120284Z Getting action download info
+build-and-test	Set up job	2026-04-06T06:07:52.9480014Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+build-and-test	Set up job	2026-04-06T06:07:53.0751823Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+build-and-test	Set up job	2026-04-06T06:07:53.2600144Z Complete job name: build-and-test
+build-and-test	Run actions/checkout@v4	´╗┐2026-04-06T06:07:53.3298339Z ##[group]Run actions/checkout@v4
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.3299355Z with:
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.3299861Z   repository: LJENTERTAINMENTMUSIC/iseyaa-ai-engine
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.3300575Z   token: ***
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.3300998Z   ssh-strict: true
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.3301379Z   ssh-user: git
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.3301773Z   persist-credentials: true
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.3302259Z   clean: true
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.3302678Z   sparse-checkout-cone-mode: true
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.3303196Z   fetch-depth: 1
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.3303576Z   fetch-tags: false
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.3303969Z   show-progress: true
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.3304349Z   lfs: false
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.3304759Z   submodules: false
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.3305154Z   set-safe-directory: true
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.3305816Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4415707Z Syncing repository: LJENTERTAINMENTMUSIC/iseyaa-ai-engine
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4418899Z ##[group]Getting Git version info
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4419725Z Working directory is '/home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine'
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4420870Z [command]/usr/bin/git version
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4458373Z git version 2.53.0
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4485127Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4509034Z Temporarily overriding HOME='/home/runner/work/_temp/7efa7afd-5a8f-4319-b369-18c2c1aaae5a' before making global git config changes
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4511514Z Adding repository directory to the temporary git global config as a safe directory
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4514520Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4548014Z Deleting the contents of '/home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine'
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4551345Z ##[group]Initializing the repository
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4555134Z [command]/usr/bin/git init /home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4650598Z hint: Using 'master' as the name for the initial branch. This default branch name
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4652213Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4653537Z hint: to use in all of your new repositories, which will suppress this warning,
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4654239Z hint: call:
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4654593Z hint:
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4655205Z hint: 	git config --global init.defaultBranch <name>
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4655782Z hint:
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4656317Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4657808Z hint: 'development'. The just-created branch can be renamed via this command:
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4658611Z hint:
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4658986Z hint: 	git branch -m <name>
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4659419Z hint:
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4659997Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4661023Z Initialized empty Git repository in /home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine/.git/
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4663136Z [command]/usr/bin/git remote add origin https://github.com/LJENTERTAINMENTMUSIC/iseyaa-ai-engine
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4691398Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4692142Z ##[group]Disabling automatic garbage collection
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4695251Z [command]/usr/bin/git config --local gc.auto 0
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4722260Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4722951Z ##[group]Setting up auth
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4728951Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.4756927Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.5042443Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.5071647Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.5297209Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.5339113Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.5594347Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.5639583Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.5652195Z ##[group]Fetching the repository
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:53.5653578Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4bf07de9be99c0ad352d48e02de6b88916efb4fb:refs/remotes/origin/master
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:54.2986564Z From https://github.com/LJENTERTAINMENTMUSIC/iseyaa-ai-engine
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:54.2988981Z  * [new ref]         4bf07de9be99c0ad352d48e02de6b88916efb4fb -> origin/master
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:54.3016020Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:54.3017893Z ##[group]Determining the checkout info
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:54.3019759Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:54.3023643Z [command]/usr/bin/git sparse-checkout disable
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:54.3061777Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:54.3090886Z ##[group]Checking out the ref
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:54.3092735Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:54.3476300Z Reset branch 'master'
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:54.3479256Z branch 'master' set up to track 'origin/master'.
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:54.3488716Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:54.3524031Z [command]/usr/bin/git log -1 --format=%H
+build-and-test	Run actions/checkout@v4	2026-04-06T06:07:54.3545727Z 4bf07de9be99c0ad352d48e02de6b88916efb4fb
+build-and-test	Setup Node.js	´╗┐2026-04-06T06:07:54.3862241Z ##[warning]Unexpected input(s) 'node_modules', valid inputs are ['always-auth', 'node-version', 'node-version-file', 'architecture', 'check-latest', 'registry-url', 'scope', 'token', 'cache', 'cache-dependency-path', 'mirror', 'mirror-token']
+build-and-test	Setup Node.js	2026-04-06T06:07:54.3888651Z ##[group]Run actions/setup-node@v4
+build-and-test	Setup Node.js	2026-04-06T06:07:54.3889764Z with:
+build-and-test	Setup Node.js	2026-04-06T06:07:54.3890768Z   node_modules: pnpm
+build-and-test	Setup Node.js	2026-04-06T06:07:54.3891669Z   always-auth: false
+build-and-test	Setup Node.js	2026-04-06T06:07:54.3892569Z   check-latest: false
+build-and-test	Setup Node.js	2026-04-06T06:07:54.3893734Z   token: ***
+build-and-test	Setup Node.js	2026-04-06T06:07:54.3894545Z ##[endgroup]
+build-and-test	Setup Node.js	2026-04-06T06:07:54.5635423Z ##[group]Environment details
+build-and-test	Setup Node.js	2026-04-06T06:07:57.5336059Z node: v20.20.2
+build-and-test	Setup Node.js	2026-04-06T06:07:57.5336773Z npm: 10.8.2
+build-and-test	Setup Node.js	2026-04-06T06:07:57.5337169Z yarn: 1.22.22
+build-and-test	Setup Node.js	2026-04-06T06:07:57.5338560Z ##[endgroup]
+build-and-test	Install pnpm	´╗┐2026-04-06T06:07:57.5465543Z ##[group]Run npm install -g pnpm
+build-and-test	Install pnpm	2026-04-06T06:07:57.5465986Z [36;1mnpm install -g pnpm[0m
+build-and-test	Install pnpm	2026-04-06T06:07:57.5496759Z shell: /usr/bin/bash -e {0}
+build-and-test	Install pnpm	2026-04-06T06:07:57.5497088Z ##[endgroup]
+build-and-test	Install pnpm	2026-04-06T06:07:59.9650423Z 
+build-and-test	Install pnpm	2026-04-06T06:07:59.9656820Z added 1 package in 2s
+build-and-test	Install pnpm	2026-04-06T06:07:59.9657073Z 
+build-and-test	Install pnpm	2026-04-06T06:07:59.9657369Z 1 package is looking for funding
+build-and-test	Install pnpm	2026-04-06T06:07:59.9659757Z   run `npm fund` for details
+build-and-test	Install Dependencies	´╗┐2026-04-06T06:07:59.9777146Z ##[group]Run pnpm install --no-frozen-lockfile
+build-and-test	Install Dependencies	2026-04-06T06:07:59.9779557Z [36;1mpnpm install --no-frozen-lockfile[0m
+build-and-test	Install Dependencies	2026-04-06T06:07:59.9806706Z shell: /usr/bin/bash -e {0}
+build-and-test	Install Dependencies	2026-04-06T06:07:59.9806960Z ##[endgroup]
+build-and-test	Install Dependencies	2026-04-06T06:08:01.5633784Z Scope: all 8 workspace projects
+build-and-test	Install Dependencies	2026-04-06T06:08:01.8682222Z Progress: resolved 0, reused 0, downloaded 1, added 0
+build-and-test	Install Dependencies	2026-04-06T06:08:02.8693348Z Progress: resolved 14, reused 0, downloaded 14, added 0
+build-and-test	Install Dependencies	2026-04-06T06:08:03.8694593Z Progress: resolved 47, reused 0, downloaded 40, added 0
+build-and-test	Install Dependencies	2026-04-06T06:08:04.8702538Z Progress: resolved 153, reused 0, downloaded 137, added 0
+build-and-test	Install Dependencies	2026-04-06T06:08:05.8702424Z Progress: resolved 274, reused 0, downloaded 210, added 0
+build-and-test	Install Dependencies	2026-04-06T06:08:06.9816828Z Progress: resolved 435, reused 0, downloaded 368, added 0
+build-and-test	Install Dependencies	2026-04-06T06:08:06.9881954Z Packages: +363
+build-and-test	Install Dependencies	2026-04-06T06:08:06.9882809Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+build-and-test	Install Dependencies	2026-04-06T06:08:07.4139162Z Progress: resolved 435, reused 0, downloaded 368, added 363, done
+build-and-test	Install Dependencies	2026-04-06T06:08:07.5272154Z .../sharp@0.34.5/node_modules/sharp install$ node install/check.js || npm run build
+build-and-test	Install Dependencies	2026-04-06T06:08:07.8176823Z .../sharp@0.34.5/node_modules/sharp install: Done
+build-and-test	Install Dependencies	2026-04-06T06:08:07.8311527Z .../node_modules/unrs-resolver postinstall$ napi-postinstall unrs-resolver 1.11.1 check
+build-and-test	Install Dependencies	2026-04-06T06:08:07.8942788Z .../node_modules/unrs-resolver postinstall: Done
+build-and-test	Install Dependencies	2026-04-06T06:08:08.2571657Z 
+build-and-test	Install Dependencies	2026-04-06T06:08:08.2572257Z devDependencies:
+build-and-test	Install Dependencies	2026-04-06T06:08:08.2600075Z + prettier 3.8.1
+build-and-test	Install Dependencies	2026-04-06T06:08:08.2600495Z + turbo 2.9.3
+build-and-test	Install Dependencies	2026-04-06T06:08:08.2600692Z 
+build-and-test	Install Dependencies	2026-04-06T06:08:08.2600866Z Done in 7s
+build-and-test	Run Linting	´╗┐2026-04-06T06:08:08.3402461Z ##[group]Run pnpm lint
+build-and-test	Run Linting	2026-04-06T06:08:08.3402744Z [36;1mpnpm lint[0m
+build-and-test	Run Linting	2026-04-06T06:08:08.3429280Z shell: /usr/bin/bash -e {0}
+build-and-test	Run Linting	2026-04-06T06:08:08.3429538Z ##[endgroup]
+build-and-test	Run Linting	2026-04-06T06:08:09.0784798Z 
+build-and-test	Run Linting	2026-04-06T06:08:09.0785795Z > iseyaa-tiarionx-monorepo@ lint /home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine
+build-and-test	Run Linting	2026-04-06T06:08:09.0786534Z > turbo run lint
+build-and-test	Run Linting	2026-04-06T06:08:09.0786719Z 
+build-and-test	Run Linting	2026-04-06T06:08:09.1225894Z 
+build-and-test	Run Linting	2026-04-06T06:08:09.1227163Z Attention:
+build-and-test	Run Linting	2026-04-06T06:08:09.1229926Z Turborepo now collects completely anonymous telemetry regarding usage.
+build-and-test	Run Linting	2026-04-06T06:08:09.1231901Z This information is used to shape the Turborepo roadmap and prioritize features.
+build-and-test	Run Linting	2026-04-06T06:08:09.1234356Z You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+build-and-test	Run Linting	2026-04-06T06:08:09.1236363Z https://turborepo.dev/docs/telemetry
+build-and-test	Run Linting	2026-04-06T06:08:09.1237748Z 
+build-and-test	Run Linting	2026-04-06T06:08:09.1605670Z 
+build-and-test	Run Linting	2026-04-06T06:08:09.1608157Z    ÔÇó Packages in scope: @iseyaa/ai_agents, @iseyaa/api-client, @iseyaa/database, @iseyaa/ui-kit, dashboard, host, iseyaa-ai-engine
+build-and-test	Run Linting	2026-04-06T06:08:09.1609520Z    ÔÇó Running lint in 7 packages
+build-and-test	Run Linting	2026-04-06T06:08:09.1610038Z    ÔÇó Remote caching disabled
+build-and-test	Run Linting	2026-04-06T06:08:09.1610312Z 
+build-and-test	Run Linting	2026-04-06T06:08:09.7565428Z [;31miseyaa-ai-engine:lint[;0m
+build-and-test	Run Linting	2026-04-06T06:08:09.7568414Z cache miss, executing ddb298dc6fc31c6a
+build-and-test	Run Linting	2026-04-06T06:08:09.7568786Z 
+build-and-test	Run Linting	2026-04-06T06:08:09.7569492Z > iseyaa-ai-engine@1.1.0 lint /home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine/apps/ai-engine
+build-and-test	Run Linting	2026-04-06T06:08:09.7570684Z > flake8 .
+build-and-test	Run Linting	2026-04-06T06:08:09.7570864Z 
+build-and-test	Run Linting	2026-04-06T06:08:09.7571034Z sh: 1: flake8: not found
+build-and-test	Run Linting	2026-04-06T06:08:09.7571778Z ÔÇëELIFECYCLEÔÇë Command failed.
+build-and-test	Run Linting	2026-04-06T06:08:09.7572783Z ÔÇëWARNÔÇë  Local package.json exists, but node_modules missing, did you mean to install?
+build-and-test	Run Linting	2026-04-06T06:08:09.7684350Z ##[group]host:lint
+build-and-test	Run Linting	2026-04-06T06:08:09.7684930Z cache miss, executing fa6d2daab582b96b
+build-and-test	Run Linting	2026-04-06T06:08:09.7685438Z 
+build-and-test	Run Linting	2026-04-06T06:08:09.7685994Z > host@0.1.0 lint /home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine/apps/host
+build-and-test	Run Linting	2026-04-06T06:08:09.7686714Z > eslint
+build-and-test	Run Linting	2026-04-06T06:08:09.7701975Z ##[error]iseyaa-ai-engine#lint: command (/home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine/apps/ai-engine) /home/runner/.local/share/pnpm/.tools/pnpm/8.15.4/bin/pnpm run lint exited (1)
+build-and-test	Run Linting	2026-04-06T06:08:09.7704635Z  ERROR  iseyaa-ai-engine#lint: command (/home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine/apps/ai-engine) /home/runner/.local/share/pnpm/.tools/pnpm/8.15.4/bin/pnpm run lint exited (1)
+build-and-test	Run Linting	2026-04-06T06:08:09.7705533Z 
+build-and-test	Run Linting	2026-04-06T06:08:09.7705918Z ##[endgroup]
+build-and-test	Run Linting	2026-04-06T06:08:09.7706295Z ##[group]dashboard:lint
+build-and-test	Run Linting	2026-04-06T06:08:09.7706621Z cache miss, executing 2bec9f7ceb2f3581
+build-and-test	Run Linting	2026-04-06T06:08:09.7706842Z 
+build-and-test	Run Linting	2026-04-06T06:08:09.7710177Z > dashboard@0.1.0 lint /home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine/apps/dashboard
+build-and-test	Run Linting	2026-04-06T06:08:09.7711159Z > eslint
+build-and-test	Run Linting	2026-04-06T06:08:09.7711350Z 
+build-and-test	Run Linting	2026-04-06T06:08:09.7711879Z ##[endgroup]
+build-and-test	Run Linting	2026-04-06T06:08:09.7712117Z 
+build-and-test	Run Linting	2026-04-06T06:08:09.7712400Z  Tasks:    0 successful, 3 total
+build-and-test	Run Linting	2026-04-06T06:08:09.7712926Z Cached:    0 cached, 3 total
+build-and-test	Run Linting	2026-04-06T06:08:09.7713327Z   Time:    645ms 
+build-and-test	Run Linting	2026-04-06T06:08:09.7713810Z Failed:    iseyaa-ai-engine#lint
+build-and-test	Run Linting	2026-04-06T06:08:09.7714013Z 
+build-and-test	Run Linting	2026-04-06T06:08:09.7714197Z  ERROR  run failed: command  exited (1)
+build-and-test	Run Linting	2026-04-06T06:08:09.7766904Z ÔÇëELIFECYCLEÔÇë Command failed with exit code 1.
+build-and-test	Run Linting	2026-04-06T06:08:09.7988589Z ##[error]Process completed with exit code 1.
+build-and-test	Post Run actions/checkout@v4	´╗┐2026-04-06T06:08:09.8086002Z Post job cleanup.
+build-and-test	Post Run actions/checkout@v4	2026-04-06T06:08:09.9017554Z [command]/usr/bin/git version
+build-and-test	Post Run actions/checkout@v4	2026-04-06T06:08:09.9053420Z git version 2.53.0
+build-and-test	Post Run actions/checkout@v4	2026-04-06T06:08:09.9096016Z Temporarily overriding HOME='/home/runner/work/_temp/bc3335ce-886b-4965-8ba5-6f9f7f5cd4eb' before making global git config changes
+build-and-test	Post Run actions/checkout@v4	2026-04-06T06:08:09.9096913Z Adding repository directory to the temporary git global config as a safe directory
+build-and-test	Post Run actions/checkout@v4	2026-04-06T06:08:09.9108201Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine
+build-and-test	Post Run actions/checkout@v4	2026-04-06T06:08:09.9140486Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-and-test	Post Run actions/checkout@v4	2026-04-06T06:08:09.9171355Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-and-test	Post Run actions/checkout@v4	2026-04-06T06:08:09.9372008Z fatal: No url found for submodule path 'apps/web' in .gitmodules
+build-and-test	Post Run actions/checkout@v4	2026-04-06T06:08:09.9401696Z ##[warning]The process '/usr/bin/git' failed with exit code 128
+build-and-test	Complete job	´╗┐2026-04-06T06:08:09.9492952Z Cleaning up orphan processes
+build-and-test	Complete job	2026-04-06T06:08:09.9764157Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-node@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+python-lint	Set up job	´╗┐2026-04-06T06:07:52.2622619Z Current runner version: '2.333.1'
+python-lint	Set up job	2026-04-06T06:07:52.2656566Z ##[group]Runner Image Provisioner
+python-lint	Set up job	2026-04-06T06:07:52.2657674Z Hosted Compute Agent
+python-lint	Set up job	2026-04-06T06:07:52.2658563Z Version: 20260213.493
+python-lint	Set up job	2026-04-06T06:07:52.2659661Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+python-lint	Set up job	2026-04-06T06:07:52.2660777Z Build Date: 2026-02-13T00:28:41Z
+python-lint	Set up job	2026-04-06T06:07:52.2661799Z Worker ID: {a38c0cf8-224b-4dd2-ad73-5307f5da0ce4}
+python-lint	Set up job	2026-04-06T06:07:52.2662994Z Azure Region: centralus
+python-lint	Set up job	2026-04-06T06:07:52.2664013Z ##[endgroup]
+python-lint	Set up job	2026-04-06T06:07:52.2666004Z ##[group]Operating System
+python-lint	Set up job	2026-04-06T06:07:52.2667214Z Ubuntu
+python-lint	Set up job	2026-04-06T06:07:52.2667986Z 24.04.4
+python-lint	Set up job	2026-04-06T06:07:52.2668714Z LTS
+python-lint	Set up job	2026-04-06T06:07:52.2669849Z ##[endgroup]
+python-lint	Set up job	2026-04-06T06:07:52.2670677Z ##[group]Runner Image
+python-lint	Set up job	2026-04-06T06:07:52.2671515Z Image: ubuntu-24.04
+python-lint	Set up job	2026-04-06T06:07:52.2672469Z Version: 20260329.72.1
+python-lint	Set up job	2026-04-06T06:07:52.2674244Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260329.72/images/ubuntu/Ubuntu2404-Readme.md
+python-lint	Set up job	2026-04-06T06:07:52.2677273Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260329.72
+python-lint	Set up job	2026-04-06T06:07:52.2678788Z ##[endgroup]
+python-lint	Set up job	2026-04-06T06:07:52.2681007Z ##[group]GITHUB_TOKEN Permissions
+python-lint	Set up job	2026-04-06T06:07:52.2683717Z Contents: read
+python-lint	Set up job	2026-04-06T06:07:52.2684688Z Metadata: read
+python-lint	Set up job	2026-04-06T06:07:52.2685527Z Packages: read
+python-lint	Set up job	2026-04-06T06:07:52.2686429Z ##[endgroup]
+python-lint	Set up job	2026-04-06T06:07:52.2689099Z Secret source: Actions
+python-lint	Set up job	2026-04-06T06:07:52.2690843Z Prepare workflow directory
+python-lint	Set up job	2026-04-06T06:07:52.3022952Z Prepare all required actions
+python-lint	Set up job	2026-04-06T06:07:52.3063855Z Getting action download info
+python-lint	Set up job	2026-04-06T06:07:52.6925013Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+python-lint	Set up job	2026-04-06T06:07:52.8345590Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+python-lint	Set up job	2026-04-06T06:07:53.0143777Z Complete job name: python-lint
+python-lint	Run actions/checkout@v4	´╗┐2026-04-06T06:07:53.0863878Z ##[group]Run actions/checkout@v4
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.0864851Z with:
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.0865384Z   repository: LJENTERTAINMENTMUSIC/iseyaa-ai-engine
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.0866180Z   token: ***
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.0866597Z   ssh-strict: true
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.0867048Z   ssh-user: git
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.0867467Z   persist-credentials: true
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.0867933Z   clean: true
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.0868348Z   sparse-checkout-cone-mode: true
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.0868843Z   fetch-depth: 1
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.0869464Z   fetch-tags: false
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.0869896Z   show-progress: true
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.0870334Z   lfs: false
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.0870716Z   submodules: false
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.0871155Z   set-safe-directory: true
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.0871895Z ##[endgroup]
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.1932636Z Syncing repository: LJENTERTAINMENTMUSIC/iseyaa-ai-engine
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.1934586Z ##[group]Getting Git version info
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.1935430Z Working directory is '/home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine'
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.1936595Z [command]/usr/bin/git version
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2035349Z git version 2.53.0
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2061223Z ##[endgroup]
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2075263Z Temporarily overriding HOME='/home/runner/work/_temp/e6fc5551-2946-424b-87b2-8bab66040bfc' before making global git config changes
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2076792Z Adding repository directory to the temporary git global config as a safe directory
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2087327Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2118305Z Deleting the contents of '/home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine'
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2122103Z ##[group]Initializing the repository
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2125925Z [command]/usr/bin/git init /home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2235013Z hint: Using 'master' as the name for the initial branch. This default branch name
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2236854Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2238164Z hint: to use in all of your new repositories, which will suppress this warning,
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2238924Z hint: call:
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2239702Z hint:
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2240258Z hint: 	git config --global init.defaultBranch <name>
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2240866Z hint:
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2241741Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2242942Z hint: 'development'. The just-created branch can be renamed via this command:
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2243689Z hint:
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2244084Z hint: 	git branch -m <name>
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2244550Z hint:
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2245166Z hint: Disable this message with "git config set advice.defaultBranchName false"
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2246469Z Initialized empty Git repository in /home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine/.git/
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2248640Z [command]/usr/bin/git remote add origin https://github.com/LJENTERTAINMENTMUSIC/iseyaa-ai-engine
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2274935Z ##[endgroup]
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2275751Z ##[group]Disabling automatic garbage collection
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2278791Z [command]/usr/bin/git config --local gc.auto 0
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2305628Z ##[endgroup]
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2306381Z ##[group]Setting up auth
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2312380Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2344075Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2634762Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2663433Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2893775Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.2929092Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.3180158Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.3217270Z ##[endgroup]
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.3218048Z ##[group]Fetching the repository
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:53.3230352Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4bf07de9be99c0ad352d48e02de6b88916efb4fb:refs/remotes/origin/master
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:54.0773774Z From https://github.com/LJENTERTAINMENTMUSIC/iseyaa-ai-engine
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:54.0777358Z  * [new ref]         4bf07de9be99c0ad352d48e02de6b88916efb4fb -> origin/master
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:54.0801249Z ##[endgroup]
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:54.0802914Z ##[group]Determining the checkout info
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:54.0804863Z ##[endgroup]
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:54.0807284Z [command]/usr/bin/git sparse-checkout disable
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:54.0842735Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:54.0868343Z ##[group]Checking out the ref
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:54.0871355Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:54.1249969Z Reset branch 'master'
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:54.1251923Z branch 'master' set up to track 'origin/master'.
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:54.1263017Z ##[endgroup]
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:54.1297104Z [command]/usr/bin/git log -1 --format=%H
+python-lint	Run actions/checkout@v4	2026-04-06T06:07:54.1318278Z 4bf07de9be99c0ad352d48e02de6b88916efb4fb
+python-lint	Set up Python	´╗┐2026-04-06T06:07:54.1648721Z ##[group]Run actions/setup-python@v5
+python-lint	Set up Python	2026-04-06T06:07:54.1650188Z with:
+python-lint	Set up Python	2026-04-06T06:07:54.1651051Z   python-version: 3.11
+python-lint	Set up Python	2026-04-06T06:07:54.1652025Z   check-latest: false
+python-lint	Set up Python	2026-04-06T06:07:54.1653214Z   token: ***
+python-lint	Set up Python	2026-04-06T06:07:54.1654099Z   update-environment: true
+python-lint	Set up Python	2026-04-06T06:07:54.1655152Z   allow-prereleases: false
+python-lint	Set up Python	2026-04-06T06:07:54.1656170Z   freethreaded: false
+python-lint	Set up Python	2026-04-06T06:07:54.1657355Z ##[endgroup]
+python-lint	Set up Python	2026-04-06T06:07:54.3356803Z ##[group]Installed versions
+python-lint	Set up Python	2026-04-06T06:07:54.3462275Z Successfully set up CPython (3.11.15)
+python-lint	Set up Python	2026-04-06T06:07:54.3471047Z ##[endgroup]
+python-lint	Install Dependencies	´╗┐2026-04-06T06:07:54.3618430Z ##[group]Run python -m pip install --upgrade pip
+python-lint	Install Dependencies	2026-04-06T06:07:54.3620176Z [36;1mpython -m pip install --upgrade pip[0m
+python-lint	Install Dependencies	2026-04-06T06:07:54.3621394Z [36;1mpip install flake8[0m
+python-lint	Install Dependencies	2026-04-06T06:07:54.3623243Z [36;1mif [ -f apps/ai-engine/requirements.txt ]; then pip install -r apps/ai-engine/requirements.txt; fi[0m
+python-lint	Install Dependencies	2026-04-06T06:07:54.3670280Z shell: /usr/bin/bash -e {0}
+python-lint	Install Dependencies	2026-04-06T06:07:54.3671241Z env:
+python-lint	Install Dependencies	2026-04-06T06:07:54.3672205Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+python-lint	Install Dependencies	2026-04-06T06:07:54.3673948Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+python-lint	Install Dependencies	2026-04-06T06:07:54.3675680Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+python-lint	Install Dependencies	2026-04-06T06:07:54.3677237Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+python-lint	Install Dependencies	2026-04-06T06:07:54.3678819Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+python-lint	Install Dependencies	2026-04-06T06:07:54.3680670Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+python-lint	Install Dependencies	2026-04-06T06:07:54.3682000Z ##[endgroup]
+python-lint	Install Dependencies	2026-04-06T06:07:55.4079021Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages (26.0.1)
+python-lint	Install Dependencies	2026-04-06T06:07:56.5880619Z Collecting flake8
+python-lint	Install Dependencies	2026-04-06T06:07:56.6647618Z   Downloading flake8-7.3.0-py2.py3-none-any.whl.metadata (3.8 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:56.6895446Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8)
+python-lint	Install Dependencies	2026-04-06T06:07:56.7008272Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:56.7258620Z Collecting pycodestyle<2.15.0,>=2.14.0 (from flake8)
+python-lint	Install Dependencies	2026-04-06T06:07:56.7366655Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:56.7628092Z Collecting pyflakes<3.5.0,>=3.4.0 (from flake8)
+python-lint	Install Dependencies	2026-04-06T06:07:56.7737765Z   Downloading pyflakes-3.4.0-py2.py3-none-any.whl.metadata (3.5 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:56.7890240Z Downloading flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:56.8139937Z Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:56.8267314Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:56.8421679Z Downloading pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:56.8657733Z Installing collected packages: pyflakes, pycodestyle, mccabe, flake8
+python-lint	Install Dependencies	2026-04-06T06:07:56.9738433Z 
+python-lint	Install Dependencies	2026-04-06T06:07:56.9748672Z Successfully installed flake8-7.3.0 mccabe-0.7.0 pycodestyle-2.14.0 pyflakes-3.4.0
+python-lint	Install Dependencies	2026-04-06T06:07:57.7505833Z Collecting fastapi==0.110.0 (from -r apps/ai-engine/requirements.txt (line 1))
+python-lint	Install Dependencies	2026-04-06T06:07:57.8789828Z   Downloading fastapi-0.110.0-py3-none-any.whl.metadata (25 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:58.0276613Z Collecting uvicorn==0.27.1 (from -r apps/ai-engine/requirements.txt (line 2))
+python-lint	Install Dependencies	2026-04-06T06:07:58.0543954Z   Downloading uvicorn-0.27.1-py3-none-any.whl.metadata (6.3 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:58.1297087Z Collecting asyncpg==0.31.0 (from -r apps/ai-engine/requirements.txt (line 3))
+python-lint	Install Dependencies	2026-04-06T06:07:58.1566806Z   Downloading asyncpg-0.31.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.4 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:58.1841618Z Collecting python-dotenv==1.1.0 (from -r apps/ai-engine/requirements.txt (line 4))
+python-lint	Install Dependencies	2026-04-06T06:07:58.2106751Z   Downloading python_dotenv-1.1.0-py3-none-any.whl.metadata (24 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:58.2479835Z Collecting httpx==0.28.1 (from -r apps/ai-engine/requirements.txt (line 5))
+python-lint	Install Dependencies	2026-04-06T06:07:58.2743634Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:58.4196682Z Collecting pydantic==2.6.1 (from -r apps/ai-engine/requirements.txt (line 6))
+python-lint	Install Dependencies	2026-04-06T06:07:58.4461976Z   Downloading pydantic-2.6.1-py3-none-any.whl.metadata (83 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:58.5032014Z Collecting python-multipart==0.0.9 (from -r apps/ai-engine/requirements.txt (line 7))
+python-lint	Install Dependencies	2026-04-06T06:07:58.5296580Z   Downloading python_multipart-0.0.9-py3-none-any.whl.metadata (2.5 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:58.5750453Z Collecting anthropic>=0.30.0 (from -r apps/ai-engine/requirements.txt (line 8))
+python-lint	Install Dependencies	2026-04-06T06:07:58.6015529Z   Downloading anthropic-0.89.0-py3-none-any.whl.metadata (3.1 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:58.6318229Z Collecting PyJWT==2.8.0 (from -r apps/ai-engine/requirements.txt (line 9))
+python-lint	Install Dependencies	2026-04-06T06:07:58.6582006Z   Downloading PyJWT-2.8.0-py3-none-any.whl.metadata (4.2 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:58.7157302Z Collecting bcrypt==4.1.2 (from -r apps/ai-engine/requirements.txt (line 10))
+python-lint	Install Dependencies	2026-04-06T06:07:58.7421882Z   Downloading bcrypt-4.1.2-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:58.7829900Z Collecting starlette<0.37.0,>=0.36.3 (from fastapi==0.110.0->-r apps/ai-engine/requirements.txt (line 1))
+python-lint	Install Dependencies	2026-04-06T06:07:58.8093132Z   Downloading starlette-0.36.3-py3-none-any.whl.metadata (5.9 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:58.8372197Z Collecting typing-extensions>=4.8.0 (from fastapi==0.110.0->-r apps/ai-engine/requirements.txt (line 1))
+python-lint	Install Dependencies	2026-04-06T06:07:58.8635012Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:58.8882551Z Collecting annotated-types>=0.4.0 (from pydantic==2.6.1->-r apps/ai-engine/requirements.txt (line 6))
+python-lint	Install Dependencies	2026-04-06T06:07:58.9144976Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:59.6871803Z Collecting pydantic-core==2.16.2 (from pydantic==2.6.1->-r apps/ai-engine/requirements.txt (line 6))
+python-lint	Install Dependencies	2026-04-06T06:07:59.7139593Z   Downloading pydantic_core-2.16.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:59.7449160Z Collecting click>=7.0 (from uvicorn==0.27.1->-r apps/ai-engine/requirements.txt (line 2))
+python-lint	Install Dependencies	2026-04-06T06:07:59.7713348Z   Downloading click-8.3.2-py3-none-any.whl.metadata (2.6 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:59.7946121Z Collecting h11>=0.8 (from uvicorn==0.27.1->-r apps/ai-engine/requirements.txt (line 2))
+python-lint	Install Dependencies	2026-04-06T06:07:59.8209489Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:59.8524018Z Collecting anyio (from httpx==0.28.1->-r apps/ai-engine/requirements.txt (line 5))
+python-lint	Install Dependencies	2026-04-06T06:07:59.8786161Z   Downloading anyio-4.13.0-py3-none-any.whl.metadata (4.5 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:59.9091725Z Collecting certifi (from httpx==0.28.1->-r apps/ai-engine/requirements.txt (line 5))
+python-lint	Install Dependencies	2026-04-06T06:07:59.9354405Z   Downloading certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+python-lint	Install Dependencies	2026-04-06T06:07:59.9636809Z Collecting httpcore==1.* (from httpx==0.28.1->-r apps/ai-engine/requirements.txt (line 5))
+python-lint	Install Dependencies	2026-04-06T06:07:59.9897772Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.0173364Z Collecting idna (from httpx==0.28.1->-r apps/ai-engine/requirements.txt (line 5))
+python-lint	Install Dependencies	2026-04-06T06:08:00.0439818Z   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.0795338Z Collecting distro<2,>=1.7.0 (from anthropic>=0.30.0->-r apps/ai-engine/requirements.txt (line 8))
+python-lint	Install Dependencies	2026-04-06T06:08:00.1059460Z   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.1288782Z Collecting docstring-parser<1,>=0.15 (from anthropic>=0.30.0->-r apps/ai-engine/requirements.txt (line 8))
+python-lint	Install Dependencies	2026-04-06T06:08:00.1551252Z   Downloading docstring_parser-0.17.0-py3-none-any.whl.metadata (3.5 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.2445718Z Collecting jiter<1,>=0.4.0 (from anthropic>=0.30.0->-r apps/ai-engine/requirements.txt (line 8))
+python-lint	Install Dependencies	2026-04-06T06:08:00.2710277Z   Downloading jiter-0.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.2972692Z Collecting sniffio (from anthropic>=0.30.0->-r apps/ai-engine/requirements.txt (line 8))
+python-lint	Install Dependencies	2026-04-06T06:08:00.3234711Z   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.3573234Z Downloading fastapi-0.110.0-py3-none-any.whl (92 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.3936390Z Downloading pydantic-2.6.1-py3-none-any.whl (394 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.4724474Z Downloading uvicorn-0.27.1-py3-none-any.whl (60 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.5012614Z Downloading asyncpg-0.31.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.0 MB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.6116361Z    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 3.0/3.0 MB 26.4 MB/s  0:00:00
+python-lint	Install Dependencies	2026-04-06T06:08:00.6381639Z Downloading python_dotenv-1.1.0-py3-none-any.whl (20 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.6669371Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.6956392Z Downloading python_multipart-0.0.9-py3-none-any.whl (22 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.7239623Z Downloading PyJWT-2.8.0-py3-none-any.whl (22 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.7523717Z Downloading bcrypt-4.1.2-cp39-abi3-manylinux_2_28_x86_64.whl (698 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.7587919Z    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 698.9/698.9 kB 102.6 MB/s  0:00:00
+python-lint	Install Dependencies	2026-04-06T06:08:00.7855071Z Downloading pydantic_core-2.16.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.8166508Z    ÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöüÔöü 2.2/2.2 MB 66.1 MB/s  0:00:00
+python-lint	Install Dependencies	2026-04-06T06:08:00.8427749Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.8713705Z Downloading starlette-0.36.3-py3-none-any.whl (71 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.8998824Z Downloading anyio-4.13.0-py3-none-any.whl (114 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.9291424Z Downloading anthropic-0.89.0-py3-none-any.whl (478 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.9594669Z Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:00.9881368Z Downloading docstring_parser-0.17.0-py3-none-any.whl (36 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:01.0168626Z Downloading jiter-0.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (362 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:01.0468026Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:01.0812840Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:01.1101498Z Downloading click-8.3.2-py3-none-any.whl (108 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:01.1391109Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:01.1676849Z Downloading idna-3.11-py3-none-any.whl (71 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:01.1966421Z Downloading certifi-2026.2.25-py3-none-any.whl (153 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:01.2257433Z Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+python-lint	Install Dependencies	2026-04-06T06:08:01.2889997Z Installing collected packages: typing-extensions, sniffio, python-multipart, python-dotenv, PyJWT, jiter, idna, h11, docstring-parser, distro, click, certifi, bcrypt, asyncpg, annotated-types, uvicorn, pydantic-core, httpcore, anyio, starlette, pydantic, httpx, fastapi, anthropic
+python-lint	Install Dependencies	2026-04-06T06:08:02.6873193Z 
+python-lint	Install Dependencies	2026-04-06T06:08:02.6893028Z Successfully installed PyJWT-2.8.0 annotated-types-0.7.0 anthropic-0.89.0 anyio-4.13.0 asyncpg-0.31.0 bcrypt-4.1.2 certifi-2026.2.25 click-8.3.2 distro-1.9.0 docstring-parser-0.17.0 fastapi-0.110.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.11 jiter-0.13.0 pydantic-2.6.1 pydantic-core-2.16.2 python-dotenv-1.1.0 python-multipart-0.0.9 sniffio-1.3.1 starlette-0.36.3 typing-extensions-4.15.0 uvicorn-0.27.1
+python-lint	Lint with flake8	´╗┐2026-04-06T06:08:02.8497035Z ##[group]Run # stop the build if there are Python syntax errors or undefined names
+python-lint	Lint with flake8	2026-04-06T06:08:02.8497984Z [36;1m# stop the build if there are Python syntax errors or undefined names[0m
+python-lint	Lint with flake8	2026-04-06T06:08:02.8498914Z [36;1mflake8 apps/ai-engine --count --select=E9,F63,F7,F82 --show-source --statistics[0m
+python-lint	Lint with flake8	2026-04-06T06:08:02.8499911Z [36;1m# exit-zero treats all errors as warnings[0m
+python-lint	Lint with flake8	2026-04-06T06:08:02.8500801Z [36;1mflake8 apps/ai-engine --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics[0m
+python-lint	Lint with flake8	2026-04-06T06:08:02.8536754Z shell: /usr/bin/bash -e {0}
+python-lint	Lint with flake8	2026-04-06T06:08:02.8537128Z env:
+python-lint	Lint with flake8	2026-04-06T06:08:02.8537533Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+python-lint	Lint with flake8	2026-04-06T06:08:02.8538237Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+python-lint	Lint with flake8	2026-04-06T06:08:02.8538931Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+python-lint	Lint with flake8	2026-04-06T06:08:02.8539738Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+python-lint	Lint with flake8	2026-04-06T06:08:02.8540331Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+python-lint	Lint with flake8	2026-04-06T06:08:02.8540958Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+python-lint	Lint with flake8	2026-04-06T06:08:02.8541698Z ##[endgroup]
+python-lint	Lint with flake8	2026-04-06T06:08:04.9527327Z 0
+python-lint	Lint with flake8	2026-04-06T06:08:05.1823845Z apps/ai-engine/database/__init__.py:9:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1825090Z apps/ai-engine/database/__init__.py:14:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1826071Z apps/ai-engine/database/__init__.py:25:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1827024Z apps/ai-engine/database/commerce.py:3:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1827981Z apps/ai-engine/database/commerce.py:12:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1828929Z apps/ai-engine/database/commerce.py:18:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1830249Z apps/ai-engine/database/commerce.py:26:22: F541 f-string is missing placeholders
+python-lint	Lint with flake8	2026-04-06T06:08:05.1831263Z apps/ai-engine/database/commerce.py:27:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1832253Z apps/ai-engine/database/commerce.py:33:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1833226Z apps/ai-engine/database/commerce.py:49:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1834170Z apps/ai-engine/database/finance.py:3:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1835111Z apps/ai-engine/database/finance.py:15:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1836043Z apps/ai-engine/database/finance.py:27:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1837013Z apps/ai-engine/database/hospitality.py:3:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1838035Z apps/ai-engine/database/hospitality.py:15:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1839059Z apps/ai-engine/database/hospitality.py:21:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1840285Z apps/ai-engine/database/hospitality.py:36:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1841332Z apps/ai-engine/database/hospitality.py:42:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1842348Z apps/ai-engine/database/hospitality.py:58:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1843321Z apps/ai-engine/database/identity.py:3:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1844270Z apps/ai-engine/database/identity.py:19:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1845221Z apps/ai-engine/db.py:4:1: F401 'database.__init__.get_db_conn' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1846211Z apps/ai-engine/db.py:4:1: F401 'database.__init__.search_destinations' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1847227Z apps/ai-engine/db.py:4:1: F401 'database.__init__.get_timestamp' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1848188Z apps/ai-engine/db.py:5:1: F401 'database.identity.submit_kyc' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1849159Z apps/ai-engine/db.py:5:1: F401 'database.identity.get_kyc_status' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1850977Z apps/ai-engine/db.py:6:1: F401 'database.hospitality.create_booking' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1852046Z apps/ai-engine/db.py:6:1: F401 'database.hospitality.record_tax_levy' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1853108Z apps/ai-engine/db.py:7:1: F401 'database.commerce.get_merchants' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1854088Z apps/ai-engine/db.py:7:1: F401 'database.commerce.get_products' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1855049Z apps/ai-engine/db.py:7:1: F401 'database.commerce.create_order' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1856049Z apps/ai-engine/db.py:7:1: F401 'database.commerce.record_commission' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1857070Z apps/ai-engine/db.py:8:1: F401 'database.finance.get_user_balance' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1858100Z apps/ai-engine/db.py:8:1: F401 'database.finance.get_user_transactions' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1859166Z apps/ai-engine/db.py:8:1: F401 'database.finance.record_transaction' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1860350Z apps/ai-engine/db.py:11:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1861289Z apps/ai-engine/db.py:14:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1862020Z apps/ai-engine/main.py:1:1: F401 'fastapi.Depends' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1862831Z apps/ai-engine/main.py:1:1: F401 'fastapi.HTTPException' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1863648Z apps/ai-engine/main.py:1:1: F401 'fastapi.Request' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1864386Z apps/ai-engine/main.py:16:1: E402 module level import not at top of file
+python-lint	Lint with flake8	2026-04-06T06:08:05.1865037Z apps/ai-engine/main.py:17:46: W291 trailing whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1865588Z apps/ai-engine/main.py:18:47: W291 trailing whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1866229Z apps/ai-engine/main.py:22:1: E402 module level import not at top of file
+python-lint	Lint with flake8	2026-04-06T06:08:05.1866931Z apps/ai-engine/main.py:36:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1867769Z apps/ai-engine/main.py:41:1: E305 expected 2 blank lines after class or function definition, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1868634Z apps/ai-engine/main.py:57:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1869501Z apps/ai-engine/main.py:60:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1870204Z apps/ai-engine/main.py:74:128: E501 line too long (135 > 127 characters)
+python-lint	Lint with flake8	2026-04-06T06:08:05.1870886Z apps/ai-engine/main.py:77:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1871562Z apps/ai-engine/main.py:81:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1872193Z apps/ai-engine/main.py:85:58: W291 trailing whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1872865Z apps/ai-engine/main.py:91:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1873699Z apps/ai-engine/routers/agriculture.py:1:1: F401 'fastapi.HTTPException' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1874640Z apps/ai-engine/routers/agriculture.py:1:1: F401 'fastapi.Body' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1875529Z apps/ai-engine/routers/agriculture.py:3:1: F401 'typing.List' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1876413Z apps/ai-engine/routers/agriculture.py:10:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1877262Z apps/ai-engine/routers/agriculture.py:14:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1878086Z apps/ai-engine/routers/agriculture.py:21:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1878912Z apps/ai-engine/routers/agriculture.py:28:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1879935Z apps/ai-engine/routers/agriculture.py:36:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1880790Z apps/ai-engine/routers/agriculture.py:51:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1881652Z apps/ai-engine/routers/agriculture.py:56:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1882537Z apps/ai-engine/routers/commerce.py:1:1: F401 'fastapi.HTTPException' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1883433Z apps/ai-engine/routers/commerce.py:1:1: F401 'fastapi.Body' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1884614Z apps/ai-engine/routers/commerce.py:9:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1885466Z apps/ai-engine/routers/commerce.py:14:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1886227Z apps/ai-engine/routers/commerce.py:19:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1886966Z apps/ai-engine/routers/commerce.py:24:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1887711Z apps/ai-engine/routers/commerce.py:33:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1888464Z apps/ai-engine/routers/commerce.py:37:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1889468Z apps/ai-engine/routers/creative.py:1:1: F401 'fastapi.HTTPException' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1890294Z apps/ai-engine/routers/creative.py:1:1: F401 'fastapi.Body' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1891092Z apps/ai-engine/routers/creative.py:3:1: F401 'typing.Optional' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1891889Z apps/ai-engine/routers/creative.py:10:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1892863Z apps/ai-engine/routers/creative.py:12:18: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.1893659Z apps/ai-engine/routers/creative.py:16:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1894411Z apps/ai-engine/routers/creative.py:26:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1895173Z apps/ai-engine/routers/creative.py:31:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1895975Z apps/ai-engine/routers/education.py:1:1: F401 'fastapi.HTTPException' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1896812Z apps/ai-engine/routers/education.py:1:1: F401 'fastapi.Body' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1897594Z apps/ai-engine/routers/education.py:3:1: F401 'typing.List' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1898349Z apps/ai-engine/routers/education.py:10:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1899098Z apps/ai-engine/routers/education.py:14:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1900112Z apps/ai-engine/routers/education.py:15:18: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.1900924Z apps/ai-engine/routers/education.py:18:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1901736Z apps/ai-engine/routers/education.py:23:20: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.1902541Z apps/ai-engine/routers/education.py:25:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1903292Z apps/ai-engine/routers/education.py:33:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1904031Z apps/ai-engine/routers/education.py:48:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1904766Z apps/ai-engine/routers/education.py:58:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1905524Z apps/ai-engine/routers/education.py:73:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1906360Z apps/ai-engine/routers/finance.py:1:1: F401 'fastapi.HTTPException' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1907225Z apps/ai-engine/routers/finance.py:1:1: F401 'fastapi.Body' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1908006Z apps/ai-engine/routers/finance.py:9:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1908746Z apps/ai-engine/routers/finance.py:12:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1909710Z apps/ai-engine/routers/finance.py:19:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1910476Z apps/ai-engine/routers/finance.py:27:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1911221Z apps/ai-engine/routers/finance.py:33:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1912035Z apps/ai-engine/routers/governance.py:1:1: F401 'fastapi.HTTPException' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1912921Z apps/ai-engine/routers/governance.py:1:1: F401 'fastapi.Body' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1913765Z apps/ai-engine/routers/governance.py:3:1: F401 'typing.Optional' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1914735Z apps/ai-engine/routers/governance.py:5:1: F401 'db' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1915498Z apps/ai-engine/routers/governance.py:10:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1916376Z apps/ai-engine/routers/governance.py:11:22: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.1917215Z apps/ai-engine/routers/governance.py:14:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1918043Z apps/ai-engine/routers/governance.py:16:16: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.1918870Z apps/ai-engine/routers/governance.py:19:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1919844Z apps/ai-engine/routers/governance.py:26:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1920635Z apps/ai-engine/routers/governance.py:36:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1921412Z apps/ai-engine/routers/governance.py:41:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1922205Z apps/ai-engine/routers/governance.py:52:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1923014Z apps/ai-engine/routers/health.py:1:1: F401 'fastapi.HTTPException' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1923997Z apps/ai-engine/routers/health.py:1:1: F401 'fastapi.Body' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1924739Z apps/ai-engine/routers/health.py:3:1: F401 'typing.List' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1925523Z apps/ai-engine/routers/health.py:3:1: F401 'typing.Dict' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1926299Z apps/ai-engine/routers/health.py:10:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1927097Z apps/ai-engine/routers/health.py:12:14: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.1927908Z apps/ai-engine/routers/health.py:15:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1928689Z apps/ai-engine/routers/health.py:16:18: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.1929736Z apps/ai-engine/routers/health.py:21:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1930538Z apps/ai-engine/routers/health.py:26:128: E501 line too long (147 > 127 characters)
+python-lint	Lint with flake8	2026-04-06T06:08:05.1931334Z apps/ai-engine/routers/health.py:28:128: E501 line too long (158 > 127 characters)
+python-lint	Lint with flake8	2026-04-06T06:08:05.1932138Z apps/ai-engine/routers/health.py:29:128: E501 line too long (146 > 127 characters)
+python-lint	Lint with flake8	2026-04-06T06:08:05.1932912Z apps/ai-engine/routers/health.py:32:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1933654Z apps/ai-engine/routers/health.py:37:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1934393Z apps/ai-engine/routers/health.py:52:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1935159Z apps/ai-engine/routers/hospitality.py:1:1: F401 'fastapi.HTTPException' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1935960Z apps/ai-engine/routers/hospitality.py:1:1: F401 'fastapi.Body' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1936695Z apps/ai-engine/routers/hospitality.py:3:1: F401 'typing.List' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1937468Z apps/ai-engine/routers/hospitality.py:10:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1938354Z apps/ai-engine/routers/hospitality.py:15:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1939439Z apps/ai-engine/routers/hospitality.py:23:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1940389Z apps/ai-engine/routers/hospitality.py:25:43: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.1941335Z apps/ai-engine/routers/hospitality.py:32:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1942168Z apps/ai-engine/routers/hospitality.py:41:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1942978Z apps/ai-engine/routers/hospitality.py:43:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1943822Z apps/ai-engine/routers/hospitality.py:47:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1944675Z apps/ai-engine/routers/hospitality.py:51:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1945687Z apps/ai-engine/routers/identity.py:1:1: F401 'fastapi.Body' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1946500Z apps/ai-engine/routers/identity.py:3:1: F401 'typing.List' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1947339Z apps/ai-engine/routers/identity.py:6:1: F401 'datetime.timedelta' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1948168Z apps/ai-engine/routers/identity.py:11:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1948955Z apps/ai-engine/routers/identity.py:16:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1949943Z apps/ai-engine/routers/identity.py:20:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1950711Z apps/ai-engine/routers/identity.py:25:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1951497Z apps/ai-engine/routers/identity.py:31:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1952286Z apps/ai-engine/routers/identity.py:40:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1953108Z apps/ai-engine/routers/identity.py:43:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1953941Z apps/ai-engine/routers/identity.py:46:128: E501 line too long (137 > 127 characters)
+python-lint	Lint with flake8	2026-04-06T06:08:05.1954943Z apps/ai-engine/routers/identity.py:49:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1955731Z apps/ai-engine/routers/identity.py:52:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1956525Z apps/ai-engine/routers/identity.py:61:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1957295Z apps/ai-engine/routers/identity.py:64:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1958107Z apps/ai-engine/routers/identity.py:69:29: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.1958947Z apps/ai-engine/routers/identity.py:89:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1959986Z apps/ai-engine/routers/identity.py:92:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.1960825Z apps/ai-engine/routers/identity.py:108:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1961698Z apps/ai-engine/routers/identity.py:112:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1962534Z apps/ai-engine/routers/identity.py:135:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1963394Z apps/ai-engine/routers/legal.py:1:1: F401 'fastapi.Depends' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1964312Z apps/ai-engine/routers/legal.py:1:1: F401 'fastapi.HTTPException' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1965213Z apps/ai-engine/routers/legal.py:1:1: F401 'fastapi.Body' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1966042Z apps/ai-engine/routers/legal.py:3:1: F401 'typing.List' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1966862Z apps/ai-engine/routers/legal.py:3:1: F401 'typing.Optional' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1967671Z apps/ai-engine/routers/legal.py:3:1: F401 'typing.Dict' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1968454Z apps/ai-engine/routers/legal.py:4:1: F401 'services.auth.get_current_user' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1969429Z apps/ai-engine/routers/legal.py:5:1: F401 'db' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1970164Z apps/ai-engine/routers/legal.py:10:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1970991Z apps/ai-engine/routers/legal.py:15:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1971804Z apps/ai-engine/routers/legal.py:22:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1972665Z apps/ai-engine/routers/legal.py:30:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1973400Z apps/ai-engine/routers/legal.py:36:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1974204Z apps/ai-engine/routers/mobility.py:1:1: F401 'fastapi.HTTPException' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1975086Z apps/ai-engine/routers/mobility.py:1:1: F401 'fastapi.Body' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1975995Z apps/ai-engine/routers/mobility.py:3:1: F401 'typing.List' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1976889Z apps/ai-engine/routers/mobility.py:9:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1977972Z apps/ai-engine/routers/mobility.py:10:18: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.1978924Z apps/ai-engine/routers/mobility.py:16:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1979971Z apps/ai-engine/routers/mobility.py:31:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1980906Z apps/ai-engine/routers/security.py:1:1: F401 'fastapi.HTTPException' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1981823Z apps/ai-engine/routers/security.py:1:1: F401 'fastapi.Body' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1982630Z apps/ai-engine/routers/security.py:3:1: F401 'typing.List' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1983439Z apps/ai-engine/routers/security.py:10:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1984198Z apps/ai-engine/routers/security.py:11:14: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.1984945Z apps/ai-engine/routers/security.py:15:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1985764Z apps/ai-engine/routers/security.py:21:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1986661Z apps/ai-engine/routers/security.py:27:20: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.1987739Z apps/ai-engine/routers/security.py:29:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1988555Z apps/ai-engine/routers/security.py:37:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1989593Z apps/ai-engine/routers/security.py:52:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1990565Z apps/ai-engine/routers/security.py:58:5: F841 local variable 'user_id' is assigned to but never used
+python-lint	Lint with flake8	2026-04-06T06:08:05.1991513Z apps/ai-engine/routers/security.py:75:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1992387Z apps/ai-engine/routers/utilities.py:1:1: F401 'fastapi.Body' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1993276Z apps/ai-engine/routers/utilities.py:3:1: F401 'typing.List' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1994163Z apps/ai-engine/routers/utilities.py:3:1: F401 'typing.Optional' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1995044Z apps/ai-engine/routers/utilities.py:3:1: F401 'typing.Dict' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.1995888Z apps/ai-engine/routers/utilities.py:10:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1996736Z apps/ai-engine/routers/utilities.py:14:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1997631Z apps/ai-engine/routers/utilities.py:15:22: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.1998547Z apps/ai-engine/routers/utilities.py:19:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.1999602Z apps/ai-engine/routers/utilities.py:26:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2000452Z apps/ai-engine/routers/utilities.py:35:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2001358Z apps/ai-engine/routers/utilities.py:38:18: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.2002286Z apps/ai-engine/routers/utilities.py:42:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2003133Z apps/ai-engine/routers/utilities.py:53:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2004025Z apps/ai-engine/routers/waste.py:1:1: F401 'fastapi.HTTPException' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.2004905Z apps/ai-engine/routers/waste.py:1:1: F401 'fastapi.Body' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.2005722Z apps/ai-engine/routers/waste.py:3:1: F401 'typing.List' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.2006537Z apps/ai-engine/routers/waste.py:3:1: F401 'typing.Optional' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.2007376Z apps/ai-engine/routers/waste.py:3:1: F401 'typing.Dict' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.2008196Z apps/ai-engine/routers/waste.py:10:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2009020Z apps/ai-engine/routers/waste.py:11:19: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.2010000Z apps/ai-engine/routers/waste.py:14:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2010638Z apps/ai-engine/routers/waste.py:19:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2011107Z apps/ai-engine/routers/waste.py:26:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2011584Z apps/ai-engine/routers/waste.py:35:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2012040Z apps/ai-engine/routers/waste.py:41:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2012514Z apps/ai-engine/routers/waste.py:52:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2012973Z apps/ai-engine/run_migration.py:8:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2013433Z apps/ai-engine/run_migration.py:18:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2013884Z apps/ai-engine/run_migration.py:21:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2014374Z apps/ai-engine/services/ai_staff.py:4:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2014871Z apps/ai-engine/services/ai_staff.py:19:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2015360Z apps/ai-engine/services/ai_staff.py:27:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2015982Z apps/ai-engine/services/auth.py:13:42: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.2016496Z apps/ai-engine/services/auth.py:16:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2016955Z apps/ai-engine/services/auth.py:20:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2017412Z apps/ai-engine/services/auth.py:24:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2017863Z apps/ai-engine/services/auth.py:30:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2018320Z apps/ai-engine/services/auth.py:40:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2018790Z apps/ai-engine/services/auth.py:44:14: E111 indentation is not a multiple of 4
+python-lint	Lint with flake8	2026-04-06T06:08:05.2019430Z apps/ai-engine/services/auth.py:44:14: E117 over-indented
+python-lint	Lint with flake8	2026-04-06T06:08:05.2019861Z apps/ai-engine/services/auth.py:52:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2020384Z apps/ai-engine/services/communications.py:6:1: F401 'typing.Dict' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.2020949Z apps/ai-engine/services/communications.py:6:1: F401 'typing.Any' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.2021486Z apps/ai-engine/services/communications.py:6:1: F401 'typing.List' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.2022029Z apps/ai-engine/services/communications.py:9:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2022637Z apps/ai-engine/services/communications.py:17:9: F841 local variable 'message' is assigned to but never used
+python-lint	Lint with flake8	2026-04-06T06:08:05.2023248Z apps/ai-engine/services/communications.py:20:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2023782Z apps/ai-engine/services/communications.py:23:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2024304Z apps/ai-engine/services/communications.py:29:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2024805Z apps/ai-engine/services/communications.py:32:59: W291 trailing whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2025296Z apps/ai-engine/services/communications.py:35:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2025943Z apps/ai-engine/services/communications.py:44:1: E305 expected 2 blank lines after class or function definition, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2026540Z apps/ai-engine/services/kyc.py:1:1: F401 'os' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.2026974Z apps/ai-engine/services/kyc.py:7:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2027432Z apps/ai-engine/services/kyc.py:14:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2027882Z apps/ai-engine/services/kyc.py:20:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2028333Z apps/ai-engine/services/kyc.py:23:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2028773Z apps/ai-engine/services/kyc.py:37:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2029361Z apps/ai-engine/services/kyc.py:41:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2029873Z apps/ai-engine/services/kyc.py:47:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2030444Z apps/ai-engine/services/kyc.py:60:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2030943Z apps/ai-engine/services/paystack.py:11:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2031498Z apps/ai-engine/services/paystack.py:19:14: E114 indentation is not a multiple of 4 (comment)
+python-lint	Lint with flake8	2026-04-06T06:08:05.2032029Z apps/ai-engine/services/paystack.py:19:14: E117 over-indented (comment)
+python-lint	Lint with flake8	2026-04-06T06:08:05.2032516Z apps/ai-engine/services/paystack.py:20:14: E111 indentation is not a multiple of 4
+python-lint	Lint with flake8	2026-04-06T06:08:05.2032984Z apps/ai-engine/services/paystack.py:20:14: E117 over-indented
+python-lint	Lint with flake8	2026-04-06T06:08:05.2033443Z apps/ai-engine/services/paystack.py:20:128: E501 line too long (134 > 127 characters)
+python-lint	Lint with flake8	2026-04-06T06:08:05.2033960Z apps/ai-engine/services/paystack.py:26:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2034462Z apps/ai-engine/services/paystack.py:29:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2034955Z apps/ai-engine/services/paystack.py:36:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2035726Z apps/ai-engine/services/paystack.py:64:1: E305 expected 2 blank lines after class or function definition, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2036317Z apps/ai-engine/tests/smoke_test.py:3:1: F401 'json' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.2036776Z apps/ai-engine/tests/smoke_test.py:11:1: E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2037255Z apps/ai-engine/tests/smoke_test.py:17:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2037726Z apps/ai-engine/tests/smoke_test.py:31:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2038201Z apps/ai-engine/tests/smoke_test.py:37:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2038670Z apps/ai-engine/tests/smoke_test.py:43:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2039145Z apps/ai-engine/tests/smoke_test.py:45:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2039974Z apps/ai-engine/tests/smoke_test.py:51:1: E305 expected 2 blank lines after class or function definition, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2040620Z apps/ai-engine/tests/smoke_test.py:53:36: E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.2041121Z apps/ai-engine/verify_ai_link.py:3:1: F401 'os' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.2041560Z apps/ai-engine/verify_ai_link.py:12:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2042023Z apps/ai-engine/verify_ai_link.py:15:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2042482Z apps/ai-engine/verify_ai_link.py:18:1: W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2042863Z 2     E111 indentation is not a multiple of 4
+python-lint	Lint with flake8	2026-04-06T06:08:05.2043178Z 1     E114 indentation is not a multiple of 4 (comment)
+python-lint	Lint with flake8	2026-04-06T06:08:05.2043463Z 3     E117 over-indented
+python-lint	Lint with flake8	2026-04-06T06:08:05.2043717Z 17    E261 at least two spaces before inline comment
+python-lint	Lint with flake8	2026-04-06T06:08:05.2044010Z 118   E302 expected 2 blank lines, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2044367Z 4     E305 expected 2 blank lines after class or function definition, found 1
+python-lint	Lint with flake8	2026-04-06T06:08:05.2044756Z 2     E402 module level import not at top of file
+python-lint	Lint with flake8	2026-04-06T06:08:05.2045046Z 6     E501 line too long (135 > 127 characters)
+python-lint	Lint with flake8	2026-04-06T06:08:05.2045373Z 73    F401 'database.__init__.get_db_conn' imported but unused
+python-lint	Lint with flake8	2026-04-06T06:08:05.2045699Z 1     F541 f-string is missing placeholders
+python-lint	Lint with flake8	2026-04-06T06:08:05.2046051Z 2     F841 local variable 'user_id' is assigned to but never used
+python-lint	Lint with flake8	2026-04-06T06:08:05.2046368Z 4     W291 trailing whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2046610Z 44    W293 blank line contains whitespace
+python-lint	Lint with flake8	2026-04-06T06:08:05.2046848Z 277
+python-lint	Post Set up Python	´╗┐2026-04-06T06:08:05.2149808Z Post job cleanup.
+python-lint	Post Run actions/checkout@v4	´╗┐2026-04-06T06:08:05.3773777Z Post job cleanup.
+python-lint	Post Run actions/checkout@v4	2026-04-06T06:08:05.4712150Z [command]/usr/bin/git version
+python-lint	Post Run actions/checkout@v4	2026-04-06T06:08:05.4747134Z git version 2.53.0
+python-lint	Post Run actions/checkout@v4	2026-04-06T06:08:05.4789045Z Temporarily overriding HOME='/home/runner/work/_temp/de06d3c1-5daa-4e6d-a2f3-af775fd6fbf9' before making global git config changes
+python-lint	Post Run actions/checkout@v4	2026-04-06T06:08:05.4790400Z Adding repository directory to the temporary git global config as a safe directory
+python-lint	Post Run actions/checkout@v4	2026-04-06T06:08:05.4801731Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/iseyaa-ai-engine/iseyaa-ai-engine
+python-lint	Post Run actions/checkout@v4	2026-04-06T06:08:05.4836431Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+python-lint	Post Run actions/checkout@v4	2026-04-06T06:08:05.4872539Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+python-lint	Post Run actions/checkout@v4	2026-04-06T06:08:05.5102732Z fatal: No url found for submodule path 'apps/web' in .gitmodules
+python-lint	Post Run actions/checkout@v4	2026-04-06T06:08:05.5152647Z ##[warning]The process '/usr/bin/git' failed with exit code 128
+python-lint	Complete job	´╗┐2026-04-06T06:08:05.5242235Z Cleaning up orphan processes
+python-lint	Complete job	2026-04-06T06:08:05.5536640Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-python@v5. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

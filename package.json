@@ -1,6 +1,9 @@
 {
   "name": "iseyaa-tiarionx-monorepo",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
